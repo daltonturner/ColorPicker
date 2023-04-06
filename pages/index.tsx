@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChromePicker } from 'react-color';
+import styles from '../styles/styles.module.css';
 
 export default function Home() {
   const [color, setColor] = useState('#ffffff');
@@ -19,14 +20,16 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <h1>Color Picker Example Site</h1>
-      <div style={{ marginTop: '1rem', textAlign: 'center' }}>
-        <button onClick={generateColorPalette}>Generate Color Palette</button>
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Color Picker Example</h1>
+      <div className={styles.colorPickerContainer}>
+        <div style={{ marginTop: '1rem', textAlign: 'center' }}>
+          <button className={styles.button} onClick={generateColorPalette}>Generate Color Palette</button>
+        </div>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '1rem' }}>
+      <div className={styles.paletteContainer}>
         {palette.map((color, index) => (
-          <div key={index} style={{ textAlign: 'center' }}>
+          <div key={index} className={styles.paletteItem}>
             <ChromePicker color={color} disableAlpha />
             <p>{color}</p>
           </div>
