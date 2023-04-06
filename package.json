@@ -8,7 +8,7 @@
   "dependencies": {
     "color-diff": "^1.2.0",
     "color-difference": "^0.3.4",
-    "next": "latest",
+    "next": "^13.2.4",
     "randomcolor": "^0.6.2",
     "react": "^18.2.0",
     "react-color": "^2.19.3",
